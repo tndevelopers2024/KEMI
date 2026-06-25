@@ -13,15 +13,13 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       <button
         ref={ref}
         className={cn(
-          "inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] cursor-pointer",
+          "inline-flex items-center justify-center rounded-full font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-orange disabled:opacity-50 disabled:pointer-events-none active:scale-[0.98] cursor-pointer",
           {
-            "bg-brand-orange text-white hover:bg-orange-600 shadow-md hover:shadow-lg":
-              variant === "primary",
-            "bg-brand-navy text-white hover:bg-slate-800 shadow-md hover:shadow-lg":
-              variant === "secondary",
-            "border-2 border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white":
+            "bg-brand-orange text-white hover:bg-kemi-primary-dark shadow-md hover:shadow-lg":
+              variant === "primary" || variant === "secondary",
+            "border-2 border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white":
               variant === "outline",
-            "hover:bg-slate-100 text-slate-700": variant === "ghost",
+            "hover:bg-brand-orange hover:text-white text-brand-orange": variant === "ghost",
             "h-9 px-4 text-sm": size === "sm",
             "h-11 px-6 text-base": size === "md",
             "h-14 px-8 text-lg": size === "lg",

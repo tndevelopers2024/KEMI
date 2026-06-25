@@ -24,7 +24,7 @@ export default function AboutSection() {
               align="left"
               className="mb-8"
             />
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function AboutSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1, duration: 0.5 }}
-                    className="flex items-center gap-4 bg-brand-gray p-4 rounded-xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
+                    className="flex items-center gap-4 bg-brand-gray p-4 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow"
                   >
                     <div className="bg-brand-orange/10 p-3 rounded-lg text-brand-orange shrink-0">
                       <Icon size={24} />
@@ -82,19 +82,19 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.7 }}
-            className="relative h-[600px] rounded-2xl overflow-hidden shadow-2xl"
+            className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl"
           >
             <div
               className="absolute inset-0 bg-cover bg-center"
               style={{
-                backgroundImage: "url('https://images.unsplash.com/photo-1541888086925-ebbc1483320f?q=80&w=2072&auto=format&fit=crop')",
+                backgroundImage: "url('https://oss.ceegelectric.com/v1/autoupload/2025-07-08/Hdx57K2xGnTWUVzafoC0OZR4.jpg_webp')",
               }}
             />
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
-            
+
             {/* Experience Badge */}
-            <div className="absolute bottom-8 left-8 bg-white p-6 rounded-xl shadow-lg border-l-4 border-brand-orange">
+            <div className="absolute bottom-8 left-8 bg-white p-6 rounded-2xl shadow-lg border-l-4 border-brand-orange">
               <div className="text-4xl font-bold text-brand-navy mb-1">15+</div>
               <div className="text-sm font-semibold text-slate-500 uppercase tracking-wider">
                 Years of Excellence

@@ -61,14 +61,12 @@ const services = [
 export default function ServicesSection() {
   return (
     <section id="services" className="py-24 bg-brand-gray relative">
-      <div className="absolute top-0 left-0 right-0 h-64 bg-brand-navy" />
-      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <SectionHeading
           title="Our Services"
           subtitle="Complete Engineering Solutions Under One Roof"
           align="center"
-          className="mb-16 [&_h2]:text-white [&_p]:text-slate-300 [&_div]:bg-brand-orange"
+          className="mb-16"
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -81,7 +79,7 @@ export default function ServicesSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6 }}
-                className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform duration-300"
+                className="bg-white rounded-4xl shadow-xl overflow-hidden flex flex-col group hover:-translate-y-2 transition-transform duration-300"
               >
                 {/* Card Header */}
                 <div className="p-8 pb-6 border-b border-slate-100 relative overflow-hidden">
@@ -109,7 +107,7 @@ export default function ServicesSection() {
                       </li>
                     ))}
                   </ul>
-                  
+
                   <Link
                     href="#contact"
                     className="inline-flex items-center gap-2 font-semibold text-brand-navy group-hover:text-brand-orange transition-colors mt-auto"
@@ -122,7 +120,7 @@ export default function ServicesSection() {
             );
           })}
         </div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}

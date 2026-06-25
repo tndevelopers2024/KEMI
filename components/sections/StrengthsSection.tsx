@@ -57,7 +57,7 @@ export default function StrengthsSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.5 }}
-                className="flex items-start gap-5 p-6 rounded-2xl border border-slate-100 hover:shadow-lg transition-all duration-300 group bg-white"
+                className="flex items-start gap-5 p-6 rounded-3xl border border-slate-100 hover:shadow-lg transition-all duration-300 group bg-white"
               >
                 <div className="bg-brand-gray p-4 rounded-xl group-hover:bg-brand-orange group-hover:text-white text-brand-navy transition-colors duration-300 shrink-0">
                   <Icon size={28} />

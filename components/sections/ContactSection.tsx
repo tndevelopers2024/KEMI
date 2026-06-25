@@ -42,8 +42,9 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact" className="pt-24 bg-brand-gray relative">
-      <div className="container mx-auto px-4 md:px-6">
+    <>
+      <section id="contact" className="py-24 bg-brand-gray relative">
+        <div className="container mx-auto px-4 md:px-6">
         <SectionHeading
           title="Let's Discuss Your Project"
           subtitle="Whether you're planning a new project, upgrading existing infrastructure, or looking for a reliable engineering partner, KEMI Engineers is ready to help."
@@ -59,10 +60,10 @@ export default function ContactSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-white p-8 rounded-2xl shadow-lg border border-slate-100"
+              className="bg-white p-8 rounded-3xl shadow-lg border border-slate-100"
             >
               <h3 className="text-2xl font-bold text-brand-navy mb-6">Contact Information</h3>
-              
+
               <ul className="space-y-6">
                 <li className="flex items-start gap-4">
                   <div className="bg-brand-orange/10 p-3 rounded-xl text-brand-orange shrink-0">
@@ -73,7 +74,7 @@ export default function ContactSection() {
                     <p className="text-slate-600">+91 99763 49753</p>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start gap-4">
                   <div className="bg-brand-orange/10 p-3 rounded-xl text-brand-orange shrink-0">
                     <Mail size={24} />
@@ -85,7 +86,7 @@ export default function ContactSection() {
                     </a>
                   </div>
                 </li>
-                
+
                 <li className="flex items-start gap-4">
                   <div className="bg-brand-orange/10 p-3 rounded-xl text-brand-orange shrink-0">
                     <MapPin size={24} />
@@ -108,10 +109,10 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="lg:col-span-3 bg-white p-8 md:p-10 rounded-2xl shadow-lg border border-slate-100 relative z-10"
+            className="lg:col-span-3 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 relative z-10"
           >
             <h3 className="text-2xl font-bold text-brand-navy mb-6">Request a Quote</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
@@ -207,27 +208,32 @@ export default function ContactSection() {
           </motion.div>
         </div>
       </div>
-      
-      {/* Google Maps Placeholder */}
-      <div className="mt-16 h-96 w-full bg-slate-200 relative z-0">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-center text-slate-500">
-            <MapPin size={48} className="mx-auto mb-4 opacity-50" />
-            <p className="font-medium text-lg">Google Maps Integration</p>
-            <p className="text-sm">Chennai, Tamil Nadu</p>
+      </section>
+
+      {/* Google Maps */}
+      <section className="bg-white py-8 md:py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full">
+          <div className="h-[400px] w-full bg-slate-200 relative z-0 rounded-[2rem] lg:rounded-[3rem] overflow-hidden shadow-xl border border-slate-100">
+            <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center text-slate-500">
+              <MapPin size={48} className="mx-auto mb-4 opacity-50" />
+              <p className="font-medium text-lg">Google Maps Integration</p>
+              <p className="text-sm">Chennai, Tamil Nadu</p>
+            </div>
           </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124376.12879559868!2d80.12571212269994!3d13.047464016147426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0"
+          ></iframe>
         </div>
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d124376.12879559868!2d80.12571212269994!3d13.047464016147426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265ea4f7d3361%3A0x6e61a70b6863d433!2sChennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1709123456789!5m2!1sen!2sin"
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          allowFullScreen
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="absolute inset-0 opacity-50 mix-blend-multiply pointer-events-none"
-        ></iframe>
       </div>
-    </section>
+      </section>
+    </>
   );
 }

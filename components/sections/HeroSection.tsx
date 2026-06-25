@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { CheckCircle2, ChevronDown } from "lucide-react";
+import { CheckCircle2, ShieldCheck, HardHat, Building2, MapPin } from "lucide-react";
 import Link from "next/link";
 
 const features = [
@@ -19,13 +19,16 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2070&auto=format&fit=crop')",
+          backgroundImage: "url('https://ncetest.com/wp-content/uploads/2024/05/shutterstock_1971671024-scaled.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 bg-brand-navy/80 mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/60 to-transparent" />
+        <div className="absolute inset-0 bg-brand-navy/20 mix-blend-multiply" />
+        {/* Darken the left side where the text sits */}
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/95 via-brand-navy/60 to-transparent" />
+        {/* Darken the bottom slightly for the scroll indicator */}
+        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
       </div>
 
       <div className="container relative z-10 mx-auto px-4 md:px-6 mt-16 md:mt-0">
@@ -38,10 +41,10 @@ export default function HeroSection() {
             <h2 className="text-brand-orange font-semibold tracking-wider uppercase mb-4">
               MEP & Electrical Turnkey Solutions
             </h2>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
               Powering Infrastructure with Engineering Excellence
             </h1>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl leading-relaxed">
+            <p className="text-lg md:text-xl text-slate-200 mb-8 max-w-2xl leading-relaxed drop-shadow-md">
               Delivering reliable, efficient, and innovative MEP and Electrical
               Engineering solutions for industrial, commercial, healthcare,
               educational, residential, and infrastructure projects across India.
@@ -82,19 +85,56 @@ export default function HeroSection() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
+      {/* Bottom Information Strip */}
       <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 hidden md:flex"
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.8, duration: 0.8 }}
+        className="absolute bottom-0 left-0 w-full bg-brand-orange py-4 z-20 overflow-hidden"
       >
-        <span className="text-white/70 text-sm font-medium tracking-widest uppercase">Scroll</span>
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 2 }}
+        <motion.div 
+          className="flex w-max"
+          animate={{ x: ["0%", "-50%"] }}
+          transition={{ ease: "linear", duration: 80, repeat: Infinity }}
         >
-          <ChevronDown className="text-brand-orange" size={24} />
+          {[...Array(4)].map((_, i) => (
+            <div key={i} className="flex justify-start items-center gap-6 lg:gap-10 pr-6 lg:pr-10 min-w-max text-[11px] lg:text-xs font-semibold tracking-[0.2em] text-white uppercase">
+              
+              <div className="flex items-center gap-3">
+                <span>200+ HAPPY CLIENTS</span>
+              </div>
+              
+              <div className="w-1 h-1 rounded-full bg-white shrink-0"></div>
+              
+              <div className="flex items-center gap-3">
+                 <HardHat size={15} className="text-white" />
+                 <span>500+ PROJECTS DELIVERED</span>
+              </div>
+              
+              <div className="w-1 h-1 rounded-full bg-white shrink-0"></div>
+              
+              <div className="flex items-center gap-3">
+                 <ShieldCheck size={15} className="text-white" />
+                 <span>ISO 9001:2015 CERTIFIED</span>
+              </div>
+              
+              <div className="w-1 h-1 rounded-full bg-white shrink-0"></div>
+              
+              <div className="flex items-center gap-3">
+                 <MapPin size={15} className="text-white" />
+                 <span>PAN INDIA PRESENCE</span>
+              </div>
+              
+              <div className="w-1 h-1 rounded-full bg-white shrink-0"></div>
+              
+              <div className="flex items-center gap-3">
+                 <Building2 size={15} className="text-white" />
+                 <span>DESIGN · BUILD · MANAGE</span>
+              </div>
+              
+              <div className="w-1 h-1 rounded-full bg-white shrink-0"></div>
+            </div>
+          ))}
         </motion.div>
       </motion.div>
     </section>

@@ -1,15 +1,29 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #0F172A;
-  --color-brand-orange: #F97316;
-  --color-brand-gray: #F8FAFC;
+  /* New KEMI Color Palette */
+  --color-kemi-primary: #e84904;
+  --color-kemi-primary-dark: #cc4c1d;
+  --color-kemi-primary-light: #db8055;
+  --color-kemi-accent-red: #fa2d07;
+  --color-kemi-accent-blue: #7ca4ce;
+  --color-kemi-black: #1b1c1d;
+  --color-kemi-brown: #522919;
+  --color-kemi-gray: #75695b;
+  --color-kemi-beige: #c0a489;
+
+  /* Aliasing old variables to new palette for seamless integration */
+  --color-brand-navy: #1b1c1d;
+  --color-brand-orange: #e84904;
+  /* A 15% tint of the beige for section backgrounds, maintaining a light but warm earthy theme */
+  --color-brand-gray: #f6f3ef;
+
   --font-sans: var(--font-inter);
 }
 
 :root {
   --background: #ffffff;
-  --foreground: #0f172a;
+  --foreground: var(--color-kemi-black);
 }
 
 body {
@@ -19,4 +33,13 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
 }

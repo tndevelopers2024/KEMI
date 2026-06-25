@@ -46,11 +46,11 @@ export default function WhyChooseUsSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="relative h-[600px] rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-xl">
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2071&auto=format&fit=crop')",
+                  backgroundImage: "url('https://5.imimg.com/data5/SELLER/Default/2023/10/350164965/IH/CO/EF/45473716/electrical-power-transformer-repairing-service.jpg')",
                 }}
               />
               <div className="absolute inset-0 bg-brand-navy/20" />
@@ -73,7 +73,7 @@ export default function WhyChooseUsSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1, duration: 0.4 }}
-                  className="flex items-start gap-4 p-4 rounded-xl hover:bg-white transition-colors border border-transparent hover:border-slate-100 hover:shadow-sm"
+                  className="flex items-start gap-4 p-4 rounded-2xl hover:bg-white transition-colors border border-transparent hover:border-slate-100 hover:shadow-sm"
                 >
                   <div className="mt-1 bg-brand-orange text-white p-1 rounded-full shrink-0">
                     <Check size={16} strokeWidth={3} />
