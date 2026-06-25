@@ -23,6 +23,25 @@ export const metadata: Metadata = {
     "Fire Fighting",
     "Industrial Electrification",
   ],
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
+  openGraph: {
+    title: "KEMI Engineers | MEP & Electrical Turnkey Solutions",
+    description: "KEMI Engineers delivers reliable, efficient, and innovative MEP and Electrical Engineering solutions.",
+    url: "https://kemi-rust.vercel.app",
+    siteName: "KEMI Engineers",
+    images: [
+      {
+        url: "/logo.png",
+        width: 800,
+        height: 600,
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
