@@ -50,7 +50,7 @@ export default function WhyChooseUsSection() {
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('https://5.imimg.com/data5/SELLER/Default/2023/10/350164965/IH/CO/EF/45473716/electrical-power-transformer-repairing-service.jpg')",
+                  backgroundImage: "url('/images/why_choose_us_bg.png')",
                 }}
               />
               <div className="absolute inset-0 bg-brand-navy/20" />

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { MapPin, Phone, Mail } from "lucide-react";
@@ -17,6 +17,7 @@ export default function ContactSection() {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -24,7 +25,7 @@ export default function ContactSection() {
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
-      alert("Thank you! Your request has been sent. We will contact you shortly.");
+      setShowSuccess(true);
       setFormData({
         name: "",
         company: "",
@@ -33,6 +34,8 @@ export default function ContactSection() {
         service: "",
         message: "",
       });
+      // Hide success message after 5 seconds
+      setTimeout(() => setShowSuccess(false), 5000);
     }, 1500);
   };
 
@@ -112,6 +115,24 @@ export default function ContactSection() {
             className="lg:col-span-3 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-slate-100 relative z-10"
           >
             <h3 className="text-2xl font-bold text-brand-navy mb-6">Request a Quote</h3>
+
+            <AnimatePresence>
+              {showSuccess && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0, y: -10 }}
+                  animate={{ opacity: 1, height: "auto", y: 0 }}
+                  exit={{ opacity: 0, height: 0, y: -10 }}
+                  className="mb-6 p-4 bg-emerald-50 border border-emerald-200 text-emerald-800 rounded-2xl flex items-start gap-3 text-sm font-medium overflow-hidden"
+                >
+                  <div className="bg-emerald-500 text-white rounded-full p-1 shrink-0 mt-0.5">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span>Thank you! Your quote request has been sent successfully. We will get back to you shortly.</span>
+                </motion.div>
+              )}
+            </AnimatePresence>
 
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

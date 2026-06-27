@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://kemi-rust.vercel.app"),
   title: "KEMI Engineers | MEP & Electrical Turnkey Solutions",
   description:
     "KEMI Engineers delivers reliable, efficient, and innovative MEP and Electrical Engineering solutions for industrial, commercial, healthcare, educational, residential, and infrastructure projects across India.",
@@ -24,8 +25,8 @@ export const metadata: Metadata = {
     "Industrial Electrification",
   ],
   icons: {
-    icon: "/logo.png",
-    apple: "/logo.png",
+    icon: "/icon.png",
+    apple: "/icon.png",
   },
   openGraph: {
     title: "KEMI Engineers | MEP & Electrical Turnkey Solutions",

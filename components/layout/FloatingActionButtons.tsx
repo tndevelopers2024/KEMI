@@ -32,14 +32,14 @@ export default function FloatingActionButtons() {
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-center gap-4">
       {/* WhatsApp Button */}
       <a
-        href="https://wa.me/919876543210" // Update this with real number later
+        href="https://wa.me/919976349753"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg animate-bounce"
         aria-label="WhatsApp"
       >
         <svg
-          xmlns="http://www.3000/svg"
+          xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="currentColor"
           className="h-7 w-7"
@@ -50,8 +50,8 @@ export default function FloatingActionButtons() {
 
       {/* Call Button */}
       <a
-        href="tel:+919876543210" // Update this with real phone number later
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange text-white shadow-lg"
+        href="tel:+919976349753"
+        className="flex h-12 w-12 items-center justify-center rounded-full bg-brand-orange text-white shadow-lg hover:scale-110 transition-transform"
         aria-label="Call Us"
       >
         <Phone className="h-6 w-6" />

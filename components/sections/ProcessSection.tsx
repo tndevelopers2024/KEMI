@@ -75,7 +75,7 @@ export default function ProcessSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className={`group flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 ${
+                  className={`group relative flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-16 ${
                     isEven ? "md:flex-row-reverse" : ""
                   }`}
                 >
@@ -104,7 +104,7 @@ export default function ProcessSection() {
                   </div>
 
                   {/* Icon Node */}
-                  <div className="absolute left-[36px] md:left-1/2 -translate-x-1/2 mt-6 md:mt-0 z-20">
+                  <div className="absolute left-[36px] md:left-1/2 -translate-x-1/2 top-4 md:top-1/2 md:-translate-y-1/2 z-20">
                     <motion.div 
                       className="bg-slate-50 p-2 md:p-2.5 rounded-full border border-slate-200 shadow-md group-hover:shadow-[0_0_20px_rgba(232,73,4,0.3)] group-hover:border-brand-orange/30 transition-all duration-500"
                     >
